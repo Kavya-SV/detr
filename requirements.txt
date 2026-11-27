@@ -1,0 +1,22 @@
+# Core deep learning (install CUDA wheel first on GPU machines, see README.md)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Modified local Ultralytics package with Chokam modules
+-e ./ultralytics_src
+
+# Dataset & evaluation utilities
+kagglehub>=0.2.0
+numpy>=1.23.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+pillow>=7.1.2
+pyyaml>=5.3.1
+opencv-python>=4.7.0,!=4.13.0.90
+matplotlib>=3.3.0
+requests>=2.23.0
+psutil>=5.8.0
+polars>=0.20.0
+filelock>=3.16.1
+ultralytics-thop>=2.1.6
+nvidia-ml-py>=12.0.0

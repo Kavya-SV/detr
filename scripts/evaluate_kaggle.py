@@ -7,9 +7,9 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import sys
 
 from ultralytics import RTDETR
-import ultralytics.nn.modules.sce as sce
+import ultralytics.nn.modules.chokam as chokam
 
-print("Imported SCE from:", sce.__file__)
+print("Imported Chokam from:", chokam.__file__)
 
 from ultralytics.nn.tasks import RTDETRDetectionModel
 import torch.nn.functional as F

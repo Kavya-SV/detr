@@ -1,13 +1,18 @@
 ﻿import csv
+from pathlib import Path
+
+RUNS_DIR = Path(__file__).resolve().parent.parent / "runs" / "detect"
+
 
 def load_csv(path):
     with open(path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         return [{k.strip(): v.strip() for k, v in row.items()} for row in reader]
 
-v2 = load_csv(r'C:\Chokam\detr\runs\detect\RTDETR_Chokam_V2\rain\results.csv')
-v1 = load_csv(r'C:\Chokam\detr\runs\detect\RTDETR_Chokam\rain\results.csv')
-base = load_csv(r'C:\Chokam\detr\runs\detect\RTDETR_Baseline_Pure\rain\results.csv')
+
+v2 = load_csv(RUNS_DIR / 'RTDETR_Chokam_V2' / 'rain' / 'results.csv')
+v1 = load_csv(RUNS_DIR / 'RTDETR_Chokam' / 'rain' / 'results.csv')
+base = load_csv(RUNS_DIR / 'RTDETR_Baseline_Pure' / 'rain' / 'results.csv')
 
 print('=== CHOKAM V2 (5 Epochs) ===')
 for row in v2:

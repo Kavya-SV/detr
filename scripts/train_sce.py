@@ -139,7 +139,7 @@ def main():
         print("GPU Device     :", torch.cuda.get_device_name(0))
     print("=" * 60)
 
-    project_root = Path(__file__).resolve().parent
+    project_root = Path(__file__).resolve().parent.parent
     yaml_path = ensure_merged_dataset(project_root)
 
     if args.device != "" and args.device != "cpu" and not torch.cuda.is_available():

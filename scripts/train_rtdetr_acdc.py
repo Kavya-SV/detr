@@ -67,7 +67,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--batch-size", type=int, default=8)
     parser.add_argument("--project", default="RTDETR_Baseline")
-    parser.add_argument("--output-root", default=str(Path(__file__).resolve().parent / "acdc_output"))
+    parser.add_argument("--output-root", default=str(Path(__file__).resolve().parent.parent / "acdc_output"))
     parser.add_argument("--dataset-root", default="")
     parser.add_argument("--device", default="")
     parser.add_argument("--weights", default="rtdetr-l.pt")
@@ -322,7 +322,7 @@ def main() -> None:
     if torch.cuda.is_available():
         print("GPU:", torch.cuda.get_device_name(0))
 
-    project_root = Path(__file__).resolve().parent
+    project_root = Path(__file__).resolve().parent.parent
     output_root = Path(args.output_root).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
 

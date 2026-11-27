@@ -2,7 +2,7 @@ from ultralytics import RTDETR
 import torch
 import yaml
 from pathlib import Path
-import ultralytics.nn.modules.sce as sce
+import ultralytics.nn.modules.chokam as chokam
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -41,7 +41,7 @@ class WeatherAwareRTDETRModel(RTDETRDetectionModel):
 
 print("Loading model...")
 
-print("Imported SCE from:", sce.__file__)
+print("Imported Chokam from:", chokam.__file__)
 model = RTDETR(
     "runs/detect/RTDETR_SCE_Weather/train_sce_v3/weights/best.pt"
 )
