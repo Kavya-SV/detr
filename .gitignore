@@ -1,0 +1,19 @@
+# Datasets and training outputs
+acdc_output/
+runs/
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+
+# Python cache / environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
